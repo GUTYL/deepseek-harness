@@ -186,10 +186,12 @@ describe('ui-settings-general apply', () => {
     onTestFinished(() => { setPageUrl(loopbackUrl) })
     const { c } = await client(mock, start)
     expect(c.connection.isLoopback).toBe(false)
+    // The document action stays a Host-document affordance; the page authority withholds it here.
     expect(ownEntries(c, 'settings.action')).toEqual([])
-    // Off-loopback settings stay process-local: no describe read, so the browser language stands.
-    expect(c.mock.log.calls('settings/describe')).toEqual([])
-    expect(c.ctx.locale.getSnapshot().active).toBe('en')
+    // Settings ride Host persistence on every page the /api trust fence admits, so the
+    // shared mirror reads the document off-loopback too and the Host locale preference stands.
+    expect(c.mock.log.calls('settings/describe')).toHaveLength(2)
+    expect(c.ctx.locale.getSnapshot().active).toBe('zh')
     await c.unload(SELF)
     await c.flush()
     for (const [name] of SEATS) expect(ownEntries(c, name)).toEqual([])
