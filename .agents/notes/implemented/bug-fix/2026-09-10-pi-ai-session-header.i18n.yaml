@@ -1,6 +1,22 @@
-# Bilingual-pair consistency record (docs/i18n/README.md): the git blob hash of each
-# side as of the last confirmed-consistent state. Both languages carry equal authority;
-# after editing either side, bring the other along and re-record with:
+# Bilingual-pair consistency record for 2026-09-10-pi-ai-session-header.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-09-10-pi-ai-session-header.md
-2026-09-10-pi-ai-session-header.md: a274990b57849074461e717e8c2e204aab78d01f
-2026-09-10-pi-ai-session-header.zh.md: 55bfc1dc9e0b8e9f37c9a16de8ba7a24a27af943
+/agent-note-pi-ai-routes-send-the-harness-session-header:
+  en: 3866efda63c8ba03
+  zh: 501b8f5452522244
+/agent-note-pi-ai-routes-send-the-harness-session-header/problem:
+  en: 0a073fbe487a8800
+  zh: 69bfed0faf531296
+/agent-note-pi-ai-routes-send-the-harness-session-header/decision:
+  en: 850ac80701da9b7f
+  zh: bc1452bb8b3361f1
+/agent-note-pi-ai-routes-send-the-harness-session-header/alternatives-considered:
+  en: 4fa10c1b3e1edcca
+  zh: 5dc7835296932cb4
+/agent-note-pi-ai-routes-send-the-harness-session-header/consequences:
+  en: 10c1f7a73f6ab58a
+  zh: 50c3e97a716b4876
+/agent-note-pi-ai-routes-send-the-harness-session-header/testing:
+  en: aa0069944704a32c
+  zh: c05c6491163c1516
