@@ -132,7 +132,7 @@ describe('PiAiAdapter provider routing', () => {
       headers: { 'x-deepseek-harness-session-id': 'stale-profile-value', 'x-opencode-session': 'stale' },
     })
     await assemble(ctx, {
-      model: 'deepseek-v4-flash',
+      model: 'deepseek-v4-pro',
       messages: [],
       sessionId: 'live-session' as never,
     })
